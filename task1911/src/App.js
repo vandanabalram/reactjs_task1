@@ -4,6 +4,7 @@ import './App.css';
 import Signin from './Components/Signin/Signin';
 import { BrowserRouter as Router,Route} from 'react-router-dom';
 import Signup from './Components/Signup/Signup';
+import Lifecycle from './Components/Lifecycle/Lifecycle';
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
     <div className="App">
       <Router>
         <switch>
-          <Route exact path ='/' component={Signup}></Route>
+          <Route exact path ='/' component={Lifecycle}></Route>
+          <Route exact path ='/signup' component={Signup}></Route>
           <Route exact path ='/signin' component={Signin}></Route>
         
         </switch>
