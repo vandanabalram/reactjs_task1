@@ -1,9 +1,11 @@
 .submit{
+    background-color: #2f102f;
     width:300px;
     height: 30px;
+    padding: 5px;
 }
 .main{
-    background-color: blue;
+    background-color: #2f102f;
     height:600px;
     width:400px;
     margin-left: 400px;
@@ -15,6 +17,17 @@
 .signup{
     width:300px;
     height: 30px;
-    background-color: rebeccapurple;
+    background-color: purple;
 
+}
+.clickme{
+    color: white;
+    text-decoration: none;
+}
+.content{
+    color: white;
+    margin-bottom: 20px;
+}
+.name{
+    color: white;
 }
