@@ -3,8 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 // import Userinput from './Components/Userinput/Userinput';
 // import Signin from './Components/Signin/Signin';
-import { BrowserRouter as Router,Route} from 'react-router-dom';
-import Add from './Components/Add/Add';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Background from './Components/Background/Background';
+// import Add from './Components/Add/Add';
 // import Lifecycle from './Components/Lifecycle/Lifecycle';
 // import Signup from './Components/Signup/Signup';
 // import Lifecycle from './Components/Lifecycle/Lifecycle';
@@ -13,19 +14,23 @@ import Add from './Components/Add/Add';
 function App() {
   return (
     <div className="App">
-       <Router>
+      <Router>
         <switch>
 
-            <Route exact path ='/' component={Add}></Route>
+        <Route exact path='/' component={Background}></Route>
+
+          {/* <Route exact path='/' component={Add}></Route> */}
           {/* <Route exact path ='/' component={Userinput}></Route> */}
-          {/* <Route exact path ='/signup' component={Signup}></Route>
-          <Route exact path ='/signin' component={Signin}></Route> */}
-        
+          {/* <Route exact path ='/signup' component={Signup}></Route> */}
+          {/* <Route exact path ='/signin' component={Signin}></Route>  */}
+          {/* <Route exact hpat ='/' component={Lifecycle}></Route>  */}
+
+
         </switch>
 
-      </Router> 
-     
-      
+      </Router>
+
+
     </div>
   );
 }

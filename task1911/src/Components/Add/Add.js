@@ -1,89 +1,45 @@
 import React, { Component } from 'react';
-
 class Add extends Component {
   state = {
-    Users: [
-      { value: 10 },
-    ],
-    Users1: [
-      { value: 10 },
-
-    ],
-    Users2: [
-      { value: 10 },
-
-    ],
+    value1: 10,
+    value2: 10,
+    value3: 10
   }
 
-  add = () => {
-    const newState = this.state.Users.map((User) => {
-      const tempUser = User;
-      tempUser.value += 5;
-      return tempUser;
-    })
-    console.log(newState);
-    this.setState({ newState });
+  subtraction = () => {
+    if (this.state.value1 > 0) {
+      this.setState({
+        value1: this.state.value1 - 5
+      })
+    }
   }
-  sub = () => {
-    const newState1 = this.state.Users1.map((User1) => {
-      const tempUser1 = User1;
-      tempUser1.value -= 5;
-      return tempUser1;
+  addition = () => {
+    this.setState({
+      value2: this.state.value2 + 5
     })
-    console.log(newState1);
-    this.setState({ newState1 });
   }
-
-
-
-  mul = () => {
-    const newState2 = this.state.Users2.map((User2) => {
-      const tempUser2 = User2;
-      tempUser2.value *= 5;
-      return tempUser2;
+  multiplication = () => {
+    this.setState({
+      value3: this.state.value3 * 5
     })
-    console.log(newState2);
-    this.setState({ newState2 });
   }
   render() {
     return (
       <div>
-        <div>
-          <button onClick={this.add}>add</button>
-          <br />
-
-          {
-            this.state.Users.map((User) => (
-              <div>value={User.value} </div>
-            ))
-          }
-        </div><br></br>
-
-        <div>
-          <button onClick={this.sub}>sub</button>
-          <br />
-
-          {
-            this.state.Users1.map((User1) => (
-              <div>value={User1.value}</div>
-            ))
-          }
-        </div><br></br>
-        <div>
-          <button onClick={this.mul}>Multiply</button>
-          <br />
-
-          {
-            this.state.Users2.map((User2) => (
-              <div>value={User2.value}</div>
-            ))
-          }
-        </div>
+        <button onClick={this.subtraction}>subraction</button>
+        <div>{this.state.value1}</div>
+        <button onClick={this.addition}>addition</button>
+        <div>{this.state.value2}</div>
+        <button onClick={this.multiplication}>multiplication</button>
+        <div>{this.state.value3}</div>
       </div>
-    )
+    );
   }
 }
-
-
-
 export default Add;
+
+
+
+
+
+
